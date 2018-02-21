@@ -1,0 +1,59 @@
+Show hidden files using Command prompt:
+
+	attrib -s -h -r /s /d *.*
+
+git -
+
+	undo all add (unstage): git reset 
+		
+	undo one add          : git rm --cached filename...
+
+
+Resolve issue "unable to auto-detect email address (got 'Haibin@DMachine.(none)')":
+
+Issue when commit:
+
+C:\corejava>git commit -m "This is my first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Haibin@DMachine.(none)')
+
+C:\corejava>git config --global user.email "haibindeng9@gmail.com"
+
+C:\corejava>git commit -m "This is my first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <haibindeng9@gmail.com>) not allowed
+
+Resolved by:
+
+C:\corejava>git config --global user.email "haibindeng9@gmail.com
+
+C:\corejava>git config --global user.name "haibindeng"
+
+C:\corejava>git commit -m "This is my first commit"
+[master (root-commit) 8d84ab8] This is my first commit
+ 1 file changed, 7 insertions(+)
+
+
+
+
+
